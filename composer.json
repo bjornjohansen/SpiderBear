@@ -1,0 +1,14 @@
+{
+    "name": "bjornjohansen/spiderbear",
+    "description": "SpiderBear is a WordPress theme forked from Intergalactic 2 by Automattic",
+    "type": "wordpress-theme",
+    "keywords": ["wordpress", "theme"],
+	"license": ["GPL-2.0-only"],
+	"authors": [
+		{
+			"name": "Bjørn Johansen",
+			"email": "post@bjornjohansen.no",
+			"homepage": "https://bjornjohansen.no"
+		}
+	]
+}
