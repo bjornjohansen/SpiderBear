@@ -135,13 +135,13 @@ add_action( 'widgets_init', 'spiderbear_widgets_init' );
  * Enqueue scripts and styles.
  */
 function spiderbear_scripts() {
-	wp_enqueue_style( 'spiderbear-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'spiderbear-style', get_stylesheet_uri(), [], filemtime( get_stylesheet_directory() . '/style.css' ) );
 
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), filemtime( get_template_directory() . '/genericons/genericons.css' ) );
 
-	wp_enqueue_script( 'spiderbear-script', get_template_directory_uri() . '/js/spiderbear.js', array( 'jquery' ), '20170428', true );
+	wp_enqueue_script( 'spiderbear-script', get_template_directory_uri() . '/js/spiderbear.js', array( 'jquery' ), filemtime( get_template_directory() . '/js/spiderbear.js' ), true );
 
-	wp_enqueue_script( 'spiderbear-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'spiderbear-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), filemtime( get_template_directory() . '/js/skip-link-focus-fix.js' ), true );
 
 	if ( is_single() ) {
 		wp_enqueue_style( 'highlight-style', get_template_directory_uri() . '/js/highlight/styles/atom-one-dark.css', array(), filemtime( get_template_directory() . '/js/highlight/styles/atom-one-dark.css' ) );
